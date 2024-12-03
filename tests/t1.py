@@ -14,7 +14,7 @@ from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader,TensorDataset
 
 name = "Exercise 5.1"
-points = 4
+points = 6
 
 
 def get_data():
@@ -62,3 +62,10 @@ def test_1(train, env):
         N += y_batch.shape[0]
     
     assert error/N < 3.0, "Error too high: {}".format(error/N)
+
+
+@test_case(points=2)
+def test_2(train, env):
+    model = env['train']()
+    num_params = np.sum([p.numel() for p in model.parameters()])
+    assert num_params < 1000, "Too many parameters: {}".format(num_params)
