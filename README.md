@@ -27,4 +27,4 @@ for x_trn, y_trn in dl_trn:
     # do something
 ```
 
-Your task is to (1) fill up the `MLP` class defining an appropriate MLP (for the task) with ***at most** 1000 parameters in total (e.g., a linear layer followed by a ReLU and another linear layer would be a good starting point) and then (2) adjust the `train` method accordingly to minimize the MSE down to an error (computed over the full datasets) of less than 3.0. The grader will check for an error of <3.0 and wether the restriction on the number of parameters is satisfied.
+Your task is to (1) fill up the `MLP` class defining an appropriate MLP (for the task) with ***at most** 1000 parameters in total (e.g., a linear layer followed by a ReLU and another linear layer would be a good starting point) and then (2) adjust the `train` method accordingly to minimize the MSE down to an error (computed over the full datasets) of less than 3.0. The grader will check for an error of <3.0 and whether the restriction on the number of parameters is satisfied.
